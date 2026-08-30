@@ -1,0 +1,6 @@
+openai
+chromadb
+datasets
+pypdf
+python-dotenv
+ollama
