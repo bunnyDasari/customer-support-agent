@@ -1,8 +1,27 @@
 from sentence_transformers import SentenceTransformer
 from app.rag.vectorstore import get_collection
+import re
 
 
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+
+
+def extract_order_number(text):
+    """
+    Extract an order number from text.
+    Supports:
+        123456
+        BB123456
+        #123456
+        #BB123456
+    """
+
+    match = re.search(r"\b(?:BB)?\d+\b", text, re.IGNORECASE)
+
+    if match:
+        return match.group(0).upper().replace("#", "")
+
+    return None
 
 
 def retrieve(query, top_k=3):
@@ -25,12 +44,35 @@ def retrieve(query, top_k=3):
         n_results=top_k
     )
 
+    # --------------------------------------------------
+    # Exact order-number filtering
+    # --------------------------------------------------
+
+    order_number = extract_order_number(query)
+
+    if order_number:
+
+        filtered_documents = []
+
+        for document in results["documents"][0]:
+
+            document_order_number = extract_order_number(document)
+
+            if document_order_number == order_number:
+                filtered_documents.append(document)
+
+        # Only return exact order-number matches
+        results["documents"][0] = filtered_documents
+
     return results
 
 
 if __name__ == "__main__":
 
-    query = "Where is my order?"
+    query = """
+    Customer goal: ORDER_STATUS
+    Order number: 123456
+    """
 
     results = retrieve(query)
 

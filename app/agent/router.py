@@ -2,154 +2,177 @@ import json
 import ollama
 
 
-MODEL_NAME = "llama3.2:1b"
+MODEL_NAME = "qwen2.5:3b"
 
 
 SYSTEM_PROMPT = """
-You are an intent classifier for a customer support agent.
+You are the goal classifier for a customer support agent.
 
-Your ONLY task is to classify the user's message.
+Your job is to identify what the customer is ultimately trying to accomplish.
 
-Return ONLY valid JSON:
+Return ONLY valid JSON in this format:
 
 {
-    "intent": "..."
+    "goal": "..."
 }
 
-You MUST choose exactly one of:
+You MUST choose exactly ONE of these goals:
 
-NEED_ORDER_NUMBER
-ORDER_NUMBER_PROVIDED
+ORDER_STATUS
 KNOWLEDGE_QUERY
 OTHER
 
 
 ========================
-INTENT 1: NEED_ORDER_NUMBER
+GOAL 1: ORDER_STATUS
 ========================
 
-Choose NEED_ORDER_NUMBER when the customer is asking about
-an order, package, delivery, tracking, or order status,
-but has NOT provided an order number.
+Choose ORDER_STATUS when the customer wants information about
+a specific order, package, shipment, tracking, delivery, or
+whether an order has arrived.
+
+The customer does NOT need to provide an order number for this
+goal.
 
 Examples:
 
 User: Where is my order?
-Intent: NEED_ORDER_NUMBER
+Goal: ORDER_STATUS
 
 User: Where is my package?
-Intent: NEED_ORDER_NUMBER
+Goal: ORDER_STATUS
 
 User: Can you track my order?
-Intent: NEED_ORDER_NUMBER
+Goal: ORDER_STATUS
 
 User: My order has not arrived.
-Intent: NEED_ORDER_NUMBER
+Goal: ORDER_STATUS
 
-User: My order is out for delivery but I haven't received it.
-Intent: NEED_ORDER_NUMBER
+User: When will my order arrive?
+Goal: ORDER_STATUS
 
-User: Can I provide my order number?
-Intent: NEED_ORDER_NUMBER
+User: My package is delayed.
+Goal: ORDER_STATUS
 
-User: What is my order number?
-Intent: NEED_ORDER_NUMBER
-
-
-=============================
-INTENT 2: ORDER_NUMBER_PROVIDED
-=============================
-
-Choose ORDER_NUMBER_PROVIDED ONLY when the customer actually
-provides an order number.
-
-Examples:
-
-User: My order number is BB123456.
-Intent: ORDER_NUMBER_PROVIDED
-
-User: Here is my order number: BB987654.
-Intent: ORDER_NUMBER_PROVIDED
-
-User: BB123456
-Intent: ORDER_NUMBER_PROVIDED
+User: I want to check my delivery.
+Goal: ORDER_STATUS
 
 User: My order number is 123456.
-Intent: ORDER_NUMBER_PROVIDED
+Goal: ORDER_STATUS
 
 
 ========================
-INTENT 3: KNOWLEDGE_QUERY
+GOAL 2: KNOWLEDGE_QUERY
 ========================
 
 Choose KNOWLEDGE_QUERY when the customer asks a general
-customer-support question that does not require a specific
-order.
+customer-support question that does not require information
+about a specific order.
 
 Examples:
 
 User: What is your return policy?
-Intent: KNOWLEDGE_QUERY
+Goal: KNOWLEDGE_QUERY
 
 User: Can I return a product?
-Intent: KNOWLEDGE_QUERY
+Goal: KNOWLEDGE_QUERY
 
 User: How long do refunds take?
-Intent: KNOWLEDGE_QUERY
+Goal: KNOWLEDGE_QUERY
 
 User: Do you offer international shipping?
-Intent: KNOWLEDGE_QUERY
+Goal: KNOWLEDGE_QUERY
+
+User: What payment methods do you accept?
+Goal: KNOWLEDGE_QUERY
+
+User: How can I cancel an order?
+Goal: KNOWLEDGE_QUERY
 
 
 ================
-INTENT 4: OTHER
+GOAL 3: OTHER
 ================
 
-Choose OTHER only when the message does not match any of
-the three intents above.
+Choose OTHER when the message does not represent a customer
+support goal that matches ORDER_STATUS or KNOWLEDGE_QUERY.
 
 Examples:
 
 User: Hello
-Intent: OTHER
+Goal: OTHER
 
 User: Thank you
-Intent: OTHER
+Goal: OTHER
 
 User: Good morning
-Intent: OTHER
+Goal: OTHER
+
+User: Okay
+Goal: OTHER
+
+User: Bye
+Goal: OTHER
 
 
 ========================
 IMPORTANT RULES
 ========================
 
-1. Mentioning the words "order number" is NOT the same as
-   providing an order number.
+1. Classify the customer's GOAL, not just the content of the
+   current message.
 
-2. "What is my order number?"
-   → NEED_ORDER_NUMBER
+2. Providing an order number does NOT mean that the goal is
+   different.
 
-3. "Can I provide my order number?"
-   → NEED_ORDER_NUMBER
+3. For example:
 
-4. "My order number is BB123456."
-   → ORDER_NUMBER_PROVIDED
+   User: Where is my order?
+   → ORDER_STATUS
 
-5. If the customer asks where an order is and gives NO
-   order number:
-   → NEED_ORDER_NUMBER
+   User: 123456
+   → If this message is being analyzed independently,
+     classify it as OTHER because it contains no clear goal.
+
+4. If the customer provides an order number while discussing
+   an order, the overall conversation goal remains ORDER_STATUS.
+
+5. "What is my order number?" means the customer is asking
+   about an order, so classify it as ORDER_STATUS.
 
 6. Do not answer the customer.
 
 7. Do not retrieve information.
 
-8. Do not explain your decision.
+8. Do not ask follow-up questions.
 
-9. Return ONLY JSON.
+9. Do not explain your decision.
+
+10. Return ONLY valid JSON.
 """
 
-def classify_intent(message):
+
+def classify_goal(message):
+    """
+    Classify the customer's overall support goal.
+
+    Returns:
+        {
+            "goal": "ORDER_STATUS"
+        }
+
+    or:
+
+        {
+            "goal": "KNOWLEDGE_QUERY"
+        }
+
+    or:
+
+        {
+            "goal": "OTHER"
+        }
+    """
 
     response = ollama.chat(
         model=MODEL_NAME,
@@ -165,24 +188,24 @@ def classify_intent(message):
         ]
     )
 
-    content = response["message"]["content"]
+    content = response["message"]["content"].strip()
 
     try:
         result = json.loads(content)
 
-        valid_intents = {
-            "NEED_ORDER_NUMBER",
-            "ORDER_NUMBER_PROVIDED",
+        valid_goals = {
+            "ORDER_STATUS",
             "KNOWLEDGE_QUERY",
             "OTHER"
         }
 
-        if result.get("intent") in valid_intents:
+        if result.get("goal") in valid_goals:
             return result
 
     except json.JSONDecodeError:
         pass
 
+    # Safe fallback
     return {
-        "intent": "OTHER"
+        "goal": "OTHER"
     }
