@@ -1,0 +1,1430 @@
+{
+  "schemaVersion": 2,
+  "project": "customer-support-agent",
+  "revision": "6a172aa43984bb6577b84f79d2ece6287685b156",
+  "sourceHash": "faa62b131713a84b0e22f0e84f16573d47b2a7f58ec9079e5c36e2e6376dba84",
+  "provenance": {
+    "tool": "genesis-graphizer",
+    "method": "static-analysis",
+    "confidenceScale": "0..1"
+  },
+  "nodes": [
+    {
+      "id": "file:app/agent/agent.py",
+      "type": "file",
+      "label": "app/agent/agent.py",
+      "path": "app/agent/agent.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "d09ac67aa247b9a8198ca59ae37d560b6e1e9779a09b3e78bed54be1d0494cf6"
+    },
+    {
+      "id": "file:app/agent/reason.py",
+      "type": "file",
+      "label": "app/agent/reason.py",
+      "path": "app/agent/reason.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "f80aa6c835eb477f435947e0c85e66d0ebda438c1046f620349576592ee48084"
+    },
+    {
+      "id": "file:app/agent/router.py",
+      "type": "file",
+      "label": "app/agent/router.py",
+      "path": "app/agent/router.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "dc04bda741ec26c38cd6f17af528e0e68339a6911aee17447ef1a19fcc38f59b"
+    },
+    {
+      "id": "file:app/agent/state.py",
+      "type": "file",
+      "label": "app/agent/state.py",
+      "path": "app/agent/state.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "3b2f5ae0dec80dfc892ed1c7f37bc4a00e572153499d2b270e9a5685e51287ce"
+    },
+    {
+      "id": "file:app/agent/support_agent.py",
+      "type": "file",
+      "label": "app/agent/support_agent.py",
+      "path": "app/agent/support_agent.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "file:app/llm/client.py",
+      "type": "file",
+      "label": "app/llm/client.py",
+      "path": "app/llm/client.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "file:app/main.py",
+      "type": "file",
+      "label": "app/main.py",
+      "path": "app/main.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "9e88a39e88b294782885c57d9e2f3b8664ac30e5fa2fae9661a70da1225ff822"
+    },
+    {
+      "id": "file:app/rag/embed.py",
+      "type": "file",
+      "label": "app/rag/embed.py",
+      "path": "app/rag/embed.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "3387e63c0e79af6150766423e7572446f781acdbc12c97391edc5d9426bf1efe"
+    },
+    {
+      "id": "file:app/rag/ingest.py",
+      "type": "file",
+      "label": "app/rag/ingest.py",
+      "path": "app/rag/ingest.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "file:app/rag/prepare_data.py",
+      "type": "file",
+      "label": "app/rag/prepare_data.py",
+      "path": "app/rag/prepare_data.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "ffff14b250f709c36d539b38775dd238798d5eff6c4e6226b7e097a3cb94232b"
+    },
+    {
+      "id": "file:app/rag/retrieve.py",
+      "type": "file",
+      "label": "app/rag/retrieve.py",
+      "path": "app/rag/retrieve.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "4c9ce0a987333d3d767f72f3869801489b9393710a80b1e7ed6b64635d7fb150"
+    },
+    {
+      "id": "file:app/rag/vectorstore.py",
+      "type": "file",
+      "label": "app/rag/vectorstore.py",
+      "path": "app/rag/vectorstore.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "c5ad8bea8e28a472b46a8baa7c2863e1cd5edca47f693b84d4952beabc255d43"
+    },
+    {
+      "id": "file:app/utils/order_number.py",
+      "type": "file",
+      "label": "app/utils/order_number.py",
+      "path": "app/utils/order_number.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "2921340b666fc73b948cd4fc29b78a24f087295ef7e4c3a00a10aaf7d285515c"
+    },
+    {
+      "id": "file:evaluate_v1.py",
+      "type": "file",
+      "label": "evaluate_v1.py",
+      "path": "evaluate_v1.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "049a3970446637787cfc2c3a2a98a139323e09356ec892f92bd7000a6aa6060a"
+    },
+    {
+      "id": "package:pypi:chromadb",
+      "type": "package",
+      "label": "chromadb",
+      "ecosystem": "pypi",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "4d21972d6173955dd030db22ddf566a2aad6c9c452873a2bdb16bdd94477a269"
+    },
+    {
+      "id": "package:pypi:ollama",
+      "type": "package",
+      "label": "ollama",
+      "ecosystem": "pypi",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "fa0fae03bc3c46c0821973fe9f1be5f90d50ac58f15044661a470cdee12637df"
+    },
+    {
+      "id": "package:pypi:pandas",
+      "type": "package",
+      "label": "pandas",
+      "ecosystem": "pypi",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "9289109b2c89f41214e6bcf2115e8483cd9b654aa1c22f2c4807044ce606be8f"
+    },
+    {
+      "id": "package:pypi:sentence_transformers",
+      "type": "package",
+      "label": "sentence_transformers",
+      "ecosystem": "pypi",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "f4911c26e953789824af61438504baf7b5c440b54d55eb4092cc3c154fbadcaf"
+    },
+    {
+      "id": "runtime:python:dataclasses",
+      "type": "runtime",
+      "label": "dataclasses",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "dba34c681ae0a8a7d66bf683f06f4979b672461fb2404177dca8b4ab5d98ca7f"
+    },
+    {
+      "id": "runtime:python:datetime",
+      "type": "runtime",
+      "label": "datetime",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "4686554b9c3e1fb149a0e7e021505618c951f789cfec438f14e8947c05848d41"
+    },
+    {
+      "id": "runtime:python:json",
+      "type": "runtime",
+      "label": "json",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "6f37f6a05e2fd9821d46f9c71a4ae5642cc4a8392959110f34947e4fecc47d62"
+    },
+    {
+      "id": "runtime:python:os",
+      "type": "runtime",
+      "label": "os",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "3806d26c0342f905b28f23c7de3c2705833ec1628f03e04e4b658f3914ba2b4c"
+    },
+    {
+      "id": "runtime:python:re",
+      "type": "runtime",
+      "label": "re",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "7e94b3e53ed926a0862ab420950da1727eead16cbd6a34908b9d475846791a02"
+    },
+    {
+      "id": "symbol:app/agent/agent.py#function:ask_for_missing_information",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ask_for_missing_information",
+      "label": "ask_for_missing_information",
+      "path": "app/agent/agent.py",
+      "line": 43,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "6a964af0f398c8dfe5912566f611564fc9db22c82acbac48064412ba5f847443"
+    },
+    {
+      "id": "symbol:app/agent/agent.py#function:get_missing_information",
+      "type": "symbol",
+      "kind": "function",
+      "name": "get_missing_information",
+      "label": "get_missing_information",
+      "path": "app/agent/agent.py",
+      "line": 27,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "fd031d53cc23f99cfc24b2adec8eb37adea6e47ba79c7ff2a538e90e8023604d"
+    },
+    {
+      "id": "symbol:app/agent/agent.py#function:print_state",
+      "type": "symbol",
+      "kind": "function",
+      "name": "print_state",
+      "label": "print_state",
+      "path": "app/agent/agent.py",
+      "line": 56,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "da3ad1d4ea6f5d17d200199a6273f89c1b9d835e4071990353ba50eac623fd8d"
+    },
+    {
+      "id": "symbol:app/agent/agent.py#function:run_agent",
+      "type": "symbol",
+      "kind": "function",
+      "name": "run_agent",
+      "label": "run_agent",
+      "path": "app/agent/agent.py",
+      "line": 67,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "988429d7be57119edb4429bd83cf1a38304599be9ee1581dcc6db944e810f719"
+    },
+    {
+      "id": "symbol:app/agent/agent.py#function:update_state",
+      "type": "symbol",
+      "kind": "function",
+      "name": "update_state",
+      "label": "update_state",
+      "path": "app/agent/agent.py",
+      "line": 11,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "de9a635de91133724aab0a8a647361fb023e6383d966bde480d481984508ecce"
+    },
+    {
+      "id": "symbol:app/agent/reason.py#function:reason",
+      "type": "symbol",
+      "kind": "function",
+      "name": "reason",
+      "label": "reason",
+      "path": "app/agent/reason.py",
+      "line": 81,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "9c9d932d669a69ed90652eacc8fb3fac3a424c5321dfdbbe0b23b71c8bf262d3"
+    },
+    {
+      "id": "symbol:app/agent/reason.py#function:validate_evidence_presence",
+      "type": "symbol",
+      "kind": "function",
+      "name": "validate_evidence_presence",
+      "label": "validate_evidence_presence",
+      "path": "app/agent/reason.py",
+      "line": 151,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "ce304fb45d84f3a697ccb2ace2ad15702930f96357603a450454e200e7f58567"
+    },
+    {
+      "id": "symbol:app/agent/router.py#function:classify_goal",
+      "type": "symbol",
+      "kind": "function",
+      "name": "classify_goal",
+      "label": "classify_goal",
+      "path": "app/agent/router.py",
+      "line": 155,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "932541aa6bc39e9b0aed4ba60be26db2068cb16ab07af0b43077ed53e0317dd4"
+    },
+    {
+      "id": "symbol:app/agent/state.py#class:AgentState",
+      "type": "symbol",
+      "kind": "class",
+      "name": "AgentState",
+      "label": "AgentState",
+      "path": "app/agent/state.py",
+      "line": 5,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "32e3aa4eaa70b2e384c24119c34c3de842d30cd9570b5897055a3ed1b73b37d1"
+    },
+    {
+      "id": "symbol:app/rag/embed.py#function:create_embeddings",
+      "type": "symbol",
+      "kind": "function",
+      "name": "create_embeddings",
+      "label": "create_embeddings",
+      "path": "app/rag/embed.py",
+      "line": 11,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "1c3afd14589ccf96359b591db21a857bced238f458f2d82c089648f37fa2aaae"
+    },
+    {
+      "id": "symbol:app/rag/prepare_data.py#function:prepare_data",
+      "type": "symbol",
+      "kind": "function",
+      "name": "prepare_data",
+      "label": "prepare_data",
+      "path": "app/rag/prepare_data.py",
+      "line": 9,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "ff7d4526bb9f5859fcddffedcb082715dc4042fd998a235f3561248a53f10fdc"
+    },
+    {
+      "id": "symbol:app/rag/retrieve.py#function:extract_order_number",
+      "type": "symbol",
+      "kind": "function",
+      "name": "extract_order_number",
+      "label": "extract_order_number",
+      "path": "app/rag/retrieve.py",
+      "line": 9,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "80dba0646642a9cfddcfe0f546098c71bbc9c2779dd7e2821458a80580a998a9"
+    },
+    {
+      "id": "symbol:app/rag/retrieve.py#function:retrieve",
+      "type": "symbol",
+      "kind": "function",
+      "name": "retrieve",
+      "label": "retrieve",
+      "path": "app/rag/retrieve.py",
+      "line": 27,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "adf46227516d457c470943aa0ebcc9480af8eacb0a7d219ab324d07d4c4e7b75"
+    },
+    {
+      "id": "symbol:app/rag/vectorstore.py#function:get_collection",
+      "type": "symbol",
+      "kind": "function",
+      "name": "get_collection",
+      "label": "get_collection",
+      "path": "app/rag/vectorstore.py",
+      "line": 10,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "334f0aa4ac40acdc40c4e46a9241b86aff55317e993b9cd06238510da4ed3565"
+    },
+    {
+      "id": "symbol:app/rag/vectorstore.py#function:insert_embeddings",
+      "type": "symbol",
+      "kind": "function",
+      "name": "insert_embeddings",
+      "label": "insert_embeddings",
+      "path": "app/rag/vectorstore.py",
+      "line": 20,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "06f18b8546c9e2ceb04742772e6490f9e4410a029905ac2bd9417361d4bb64a6"
+    },
+    {
+      "id": "symbol:app/utils/order_number.py#function:extract_order_number",
+      "type": "symbol",
+      "kind": "function",
+      "name": "extract_order_number",
+      "label": "extract_order_number",
+      "path": "app/utils/order_number.py",
+      "line": 4,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "80dba0646642a9cfddcfe0f546098c71bbc9c2779dd7e2821458a80580a998a9"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:calculate_metrics",
+      "type": "symbol",
+      "kind": "function",
+      "name": "calculate_metrics",
+      "label": "calculate_metrics",
+      "path": "evaluate_v1.py",
+      "line": 497,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "ffdf5828f9fc4b9ee24007dac673e952732eca8ed0ba24a0873e2aa86d97a481"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:clean_text",
+      "type": "symbol",
+      "kind": "function",
+      "name": "clean_text",
+      "label": "clean_text",
+      "path": "evaluate_v1.py",
+      "line": 620,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "e7fbb4180e7b66fbf6662b5c7fc60ddccd1e398cdc8e924b5dede4825c700d83"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:determine_case_result",
+      "type": "symbol",
+      "kind": "function",
+      "name": "determine_case_result",
+      "label": "determine_case_result",
+      "path": "evaluate_v1.py",
+      "line": 572,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "747b248ce62ff0e9203afd89e4a42a03fa8e12dee973f341e694260112c4765b"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:evaluate_cases",
+      "type": "symbol",
+      "kind": "function",
+      "name": "evaluate_cases",
+      "label": "evaluate_cases",
+      "path": "evaluate_v1.py",
+      "line": 426,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "61bc6f4b55b1eb3689d6f9520da104bbc2729ac425d107ca83735fbbae4d7f55"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:generate_markdown",
+      "type": "symbol",
+      "kind": "function",
+      "name": "generate_markdown",
+      "label": "generate_markdown",
+      "path": "evaluate_v1.py",
+      "line": 745,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "7b29be723c9b58722c895d6d4ba64ba6b00b82aa9a6c250879d992c183c4e865"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:get_attempt_count",
+      "type": "symbol",
+      "kind": "function",
+      "name": "get_attempt_count",
+      "label": "get_attempt_count",
+      "path": "evaluate_v1.py",
+      "line": 668,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "45a7bfaed3e2f01686d9c90af79bd98b7c3be3bada2ac1ea1337bd3d46fbc994"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:get_customer_input",
+      "type": "symbol",
+      "kind": "function",
+      "name": "get_customer_input",
+      "label": "get_customer_input",
+      "path": "evaluate_v1.py",
+      "line": 649,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "542c2214c052ba1019dd1b75bbd42bb5400b4f98bc1eb17f7d84dd79e322d318"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:get_evidence_count",
+      "type": "symbol",
+      "kind": "function",
+      "name": "get_evidence_count",
+      "label": "get_evidence_count",
+      "path": "evaluate_v1.py",
+      "line": 709,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "db959e91513d1848e8e9709c014e627389b3ab39359f3afbd7c5f997fe201487"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:get_last_decision",
+      "type": "symbol",
+      "kind": "function",
+      "name": "get_last_decision",
+      "label": "get_last_decision",
+      "path": "evaluate_v1.py",
+      "line": 684,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "483da8d1009b8e707621f14a3ce81025d5f2c390a5067b509f7e9d735e8179e5"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:get_missing_information",
+      "type": "symbol",
+      "kind": "function",
+      "name": "get_missing_information",
+      "label": "get_missing_information",
+      "path": "evaluate_v1.py",
+      "line": 45,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "fd031d53cc23f99cfc24b2adec8eb37adea6e47ba79c7ff2a538e90e8023604d"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:load_cases",
+      "type": "symbol",
+      "kind": "function",
+      "name": "load_cases",
+      "label": "load_cases",
+      "path": "evaluate_v1.py",
+      "line": 411,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "3cf2b82e51442aacd0224895b62408e48dbbbd84713b9f78549a82017d035c07"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:main",
+      "type": "symbol",
+      "kind": "function",
+      "name": "main",
+      "label": "main",
+      "path": "evaluate_v1.py",
+      "line": 1313,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "f583c61a40c09d3bfca9b3e6ef3e28a4f4dfaced58f9b895d0d76c0d77a8dd4c"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:run_single_case",
+      "type": "symbol",
+      "kind": "function",
+      "name": "run_single_case",
+      "label": "run_single_case",
+      "path": "evaluate_v1.py",
+      "line": 64,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "0d1340f1dc15057dcebb025757d0bf7ac92650fe4abb032a1a7bfa2557d3c972"
+    },
+    {
+      "id": "symbol:evaluate_v1.py#function:update_state",
+      "type": "symbol",
+      "kind": "function",
+      "name": "update_state",
+      "label": "update_state",
+      "path": "evaluate_v1.py",
+      "line": 32,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "de9a635de91133724aab0a8a647361fb023e6383d966bde480d481984508ecce"
+    }
+  ],
+  "edges": [
+    {
+      "type": "calls",
+      "source": "symbol:app/agent/agent.py#function:run_agent",
+      "target": "symbol:app/agent/agent.py#function:ask_for_missing_information",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/agent/agent.py#function:run_agent",
+      "target": "symbol:app/agent/agent.py#function:get_missing_information",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/agent/agent.py#function:run_agent",
+      "target": "symbol:app/agent/agent.py#function:print_state",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/agent/agent.py#function:run_agent",
+      "target": "symbol:app/agent/agent.py#function:update_state",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/agent/agent.py#function:run_agent",
+      "target": "symbol:app/agent/reason.py#function:reason",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/agent/agent.py#function:run_agent",
+      "target": "symbol:app/agent/router.py#function:classify_goal",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/agent/agent.py#function:run_agent",
+      "target": "symbol:app/agent/state.py#class:AgentState",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/agent/agent.py#function:run_agent",
+      "target": "symbol:app/rag/retrieve.py#function:retrieve",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/agent/agent.py#function:update_state",
+      "target": "symbol:app/utils/order_number.py#function:extract_order_number",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/rag/retrieve.py#function:retrieve",
+      "target": "symbol:app/rag/retrieve.py#function:extract_order_number",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/rag/retrieve.py#function:retrieve",
+      "target": "symbol:app/rag/vectorstore.py#function:get_collection",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:app/rag/vectorstore.py#function:insert_embeddings",
+      "target": "symbol:app/rag/vectorstore.py#function:get_collection",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:evaluate_cases",
+      "target": "symbol:evaluate_v1.py#function:run_single_case",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:generate_markdown",
+      "target": "symbol:evaluate_v1.py#function:clean_text",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:generate_markdown",
+      "target": "symbol:evaluate_v1.py#function:determine_case_result",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:generate_markdown",
+      "target": "symbol:evaluate_v1.py#function:get_attempt_count",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:generate_markdown",
+      "target": "symbol:evaluate_v1.py#function:get_customer_input",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:generate_markdown",
+      "target": "symbol:evaluate_v1.py#function:get_evidence_count",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:get_customer_input",
+      "target": "symbol:evaluate_v1.py#function:clean_text",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:main",
+      "target": "symbol:evaluate_v1.py#function:calculate_metrics",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:main",
+      "target": "symbol:evaluate_v1.py#function:evaluate_cases",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:main",
+      "target": "symbol:evaluate_v1.py#function:generate_markdown",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:main",
+      "target": "symbol:evaluate_v1.py#function:load_cases",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:run_single_case",
+      "target": "symbol:app/agent/reason.py#function:reason",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:run_single_case",
+      "target": "symbol:app/agent/router.py#function:classify_goal",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:run_single_case",
+      "target": "symbol:app/agent/state.py#class:AgentState",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:run_single_case",
+      "target": "symbol:app/rag/retrieve.py#function:retrieve",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:run_single_case",
+      "target": "symbol:evaluate_v1.py#function:get_missing_information",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:run_single_case",
+      "target": "symbol:evaluate_v1.py#function:update_state",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:evaluate_v1.py#function:update_state",
+      "target": "symbol:app/utils/order_number.py#function:extract_order_number",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/agent/agent.py",
+      "target": "symbol:app/agent/agent.py#function:ask_for_missing_information",
+      "line": 43,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/agent/agent.py",
+      "target": "symbol:app/agent/agent.py#function:get_missing_information",
+      "line": 27,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/agent/agent.py",
+      "target": "symbol:app/agent/agent.py#function:print_state",
+      "line": 56,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/agent/agent.py",
+      "target": "symbol:app/agent/agent.py#function:run_agent",
+      "line": 67,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/agent/agent.py",
+      "target": "symbol:app/agent/agent.py#function:update_state",
+      "line": 11,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/agent/reason.py",
+      "target": "symbol:app/agent/reason.py#function:reason",
+      "line": 81,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/agent/reason.py",
+      "target": "symbol:app/agent/reason.py#function:validate_evidence_presence",
+      "line": 151,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/agent/router.py",
+      "target": "symbol:app/agent/router.py#function:classify_goal",
+      "line": 155,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/agent/state.py",
+      "target": "symbol:app/agent/state.py#class:AgentState",
+      "line": 5,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/rag/embed.py",
+      "target": "symbol:app/rag/embed.py#function:create_embeddings",
+      "line": 11,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/rag/prepare_data.py",
+      "target": "symbol:app/rag/prepare_data.py#function:prepare_data",
+      "line": 9,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/rag/retrieve.py",
+      "target": "symbol:app/rag/retrieve.py#function:extract_order_number",
+      "line": 9,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/rag/retrieve.py",
+      "target": "symbol:app/rag/retrieve.py#function:retrieve",
+      "line": 27,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/rag/vectorstore.py",
+      "target": "symbol:app/rag/vectorstore.py#function:get_collection",
+      "line": 10,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/rag/vectorstore.py",
+      "target": "symbol:app/rag/vectorstore.py#function:insert_embeddings",
+      "line": 20,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:app/utils/order_number.py",
+      "target": "symbol:app/utils/order_number.py#function:extract_order_number",
+      "line": 4,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:calculate_metrics",
+      "line": 497,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:clean_text",
+      "line": 620,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:determine_case_result",
+      "line": 572,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:evaluate_cases",
+      "line": 426,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:generate_markdown",
+      "line": 745,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:get_attempt_count",
+      "line": 668,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:get_customer_input",
+      "line": 649,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:get_evidence_count",
+      "line": 709,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:get_last_decision",
+      "line": 684,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:get_missing_information",
+      "line": 45,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:load_cases",
+      "line": 411,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:main",
+      "line": 1313,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:run_single_case",
+      "line": 64,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:evaluate_v1.py",
+      "target": "symbol:evaluate_v1.py#function:update_state",
+      "line": 32,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/agent.py",
+      "target": "file:app/agent/reason.py",
+      "specifier": "app.agent.reason",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/agent.py",
+      "target": "file:app/agent/router.py",
+      "specifier": "app.agent.router",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/agent.py",
+      "target": "file:app/agent/state.py",
+      "specifier": "app.agent.state",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/agent.py",
+      "target": "file:app/rag/retrieve.py",
+      "specifier": "app.rag.retrieve",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/agent.py",
+      "target": "file:app/utils/order_number.py",
+      "specifier": "app.utils.order_number",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/reason.py",
+      "target": "package:pypi:ollama",
+      "specifier": "ollama",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/reason.py",
+      "target": "runtime:python:json",
+      "specifier": "json",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/router.py",
+      "target": "package:pypi:ollama",
+      "specifier": "ollama",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/router.py",
+      "target": "runtime:python:json",
+      "specifier": "json",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/agent/state.py",
+      "target": "runtime:python:dataclasses",
+      "specifier": "dataclasses",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/main.py",
+      "target": "package:pypi:ollama",
+      "specifier": "ollama",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/rag/embed.py",
+      "target": "package:pypi:sentence_transformers",
+      "specifier": "sentence_transformers",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/rag/embed.py",
+      "target": "runtime:python:json",
+      "specifier": "json",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/rag/prepare_data.py",
+      "target": "package:pypi:pandas",
+      "specifier": "pandas",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/rag/prepare_data.py",
+      "target": "runtime:python:json",
+      "specifier": "json",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/rag/retrieve.py",
+      "target": "file:app/rag/vectorstore.py",
+      "specifier": "app.rag.vectorstore",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/rag/retrieve.py",
+      "target": "package:pypi:sentence_transformers",
+      "specifier": "sentence_transformers",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/rag/retrieve.py",
+      "target": "runtime:python:re",
+      "specifier": "re",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/rag/vectorstore.py",
+      "target": "package:pypi:chromadb",
+      "specifier": "chromadb",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/rag/vectorstore.py",
+      "target": "runtime:python:json",
+      "specifier": "json",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:app/utils/order_number.py",
+      "target": "runtime:python:re",
+      "specifier": "re",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:evaluate_v1.py",
+      "target": "file:app/agent/reason.py",
+      "specifier": "app.agent.reason",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:evaluate_v1.py",
+      "target": "file:app/agent/router.py",
+      "specifier": "app.agent.router",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:evaluate_v1.py",
+      "target": "file:app/agent/state.py",
+      "specifier": "app.agent.state",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:evaluate_v1.py",
+      "target": "file:app/rag/retrieve.py",
+      "specifier": "app.rag.retrieve",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:evaluate_v1.py",
+      "target": "file:app/utils/order_number.py",
+      "specifier": "app.utils.order_number",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:evaluate_v1.py",
+      "target": "runtime:python:datetime",
+      "specifier": "datetime",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:evaluate_v1.py",
+      "target": "runtime:python:json",
+      "specifier": "json",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:evaluate_v1.py",
+      "target": "runtime:python:os",
+      "specifier": "os",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    }
+  ],
+  "warnings": [],
+  "stats": {
+    "unresolvedCalls": 107
+  }
+}

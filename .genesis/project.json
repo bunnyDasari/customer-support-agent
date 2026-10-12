@@ -1,0 +1,434 @@
+{
+  "schema_version": 2,
+  "project": {
+    "name": "customer-support-agent",
+    "mode": "adopt",
+    "profile": "prototype",
+    "objective": "Customer support AI agent with evidence-based reasoning, knowledge retrieval, and human escalation.",
+    "constraints": [],
+    "non_goals": [],
+    "trust_boundary": "local repository",
+    "created_at": "2026-09-25T06:52:04.536Z",
+    "updated_at": "2026-10-02T11:56:40.051Z"
+  },
+  "policy": {
+    "ponytail": "full",
+    "autonomy": "human-in-the-loop",
+    "learned_rule_promotion": "human-required",
+    "cleanup": "propose-only",
+    "traces": {
+      "storage": "local",
+      "commit_raw": false,
+      "redact_secrets": true
+    }
+  },
+  "lifecycle": {
+    "phase": "build",
+    "status": "active",
+    "active_task": "TASK-REASON",
+    "blocker": null,
+    "next_action": "Run the task pre-flight."
+  },
+  "commands": {},
+  "workflow": {
+    "type": "new-product",
+    "started_at": "2026-09-25T07:34:38.922Z",
+    "spec_check": {
+      "at": "2026-10-02T11:56:19.173Z",
+      "source_hash": "df0971c2562fadfe1cb83f43deb85d7a3f4af8b3d9f983c966c7fdb1ddf1d7b4",
+      "requirements": [
+        "AC-1",
+        "AC-2",
+        "AC-3",
+        "FR-1",
+        "FR-2",
+        "FR-3",
+        "FR-4",
+        "FR-5",
+        "NFR-1",
+        "NFR-2",
+        "NFR-3"
+      ]
+    },
+    "plan_check": {
+      "at": "2026-10-02T11:56:34.919Z",
+      "source_hash": "4fc4403111d1ddd4cb7b9ddf8d09b530302b2ac7033cda78d58f25ae584682f4"
+    },
+    "plan_approval": {
+      "human": "Mohanraj",
+      "reason": "Reviewed and approved",
+      "at": "2026-10-02T11:56:39.961Z",
+      "source_hash": "4fc4403111d1ddd4cb7b9ddf8d09b530302b2ac7033cda78d58f25ae584682f4"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "SPEC-1",
+      "type": "specification",
+      "path": "SPEC.md",
+      "status": "approved",
+      "requirements": [
+        "AC-1",
+        "AC-2",
+        "AC-3",
+        "FR-1",
+        "FR-2",
+        "FR-3",
+        "FR-4",
+        "FR-5",
+        "NFR-1",
+        "NFR-2",
+        "NFR-3"
+      ],
+      "source_hash": "df0971c2562fadfe1cb83f43deb85d7a3f4af8b3d9f983c966c7fdb1ddf1d7b4",
+      "approval": {
+        "human": "Mohanraj",
+        "reason": "Reviewed and approved",
+        "at": "2026-10-02T11:56:34.504Z",
+        "source_hash": "df0971c2562fadfe1cb83f43deb85d7a3f4af8b3d9f983c966c7fdb1ddf1d7b4"
+      }
+    }
+  ],
+  "assumptions": [],
+  "invariants": [
+    {
+      "id": "INVARIANT-1de4ea2e",
+      "text": "The customer-support agent must not generate a confident answer when reliable supporting evidence is unavailable.",
+      "source": "unverified",
+      "recorded_at": "2026-09-26T06:18:42.104Z",
+      "paths": [],
+      "tags": []
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DECISION-a23b589a",
+      "title": "V1 architecture",
+      "text": "V1 uses a goal classifier, AgentState working memory, ChromaDB retrieval, an evidence-based reasoning component, and an agent loop that can answer, request missing information, retry retrieval, or escalate to human support.",
+      "status": "accepted",
+      "source": null,
+      "recorded_at": "2026-09-26T06:18:38.427Z",
+      "paths": [],
+      "tags": []
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "KNOWLEDGE-a1aef186",
+      "title": "V1 agent architecture",
+      "text": "V1 is a customer-support AI agent with a goal classification layer, working state, retrieval from the knowledge base, evidence-based reasoning, and an agent loop that can answer, request missing customer information, retry retrieval when evidence is insufficient, or escalate to human support.",
+      "source": null,
+      "tags": [],
+      "recorded_at": "2026-09-26T06:12:24.256Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-f9dd5f95",
+      "title": "V1 evaluation results",
+      "text": "V1 was evaluated on 50 customer-support test cases covering ORDER_STATUS, KNOWLEDGE_QUERY, and OTHER. The evaluation achieved 96% goal accuracy with 2 answers, 14 information requests, 18 escalations, and 0 execution errors. The evaluation exposed retrieval-quality problems for knowledge queries, an empty-evidence safety failure where the reasoner returned SUFFICIENT, and some goal-classification edge cases.",
+      "source": null,
+      "tags": [],
+      "recorded_at": "2026-09-26T06:18:32.667Z",
+      "paths": []
+    }
+  ],
+  "tasks": [
+    {
+      "id": "SPEC-1",
+      "outcome": "Produce an approved, implementation-ready product specification",
+      "state": "done",
+      "risk": "medium",
+      "owner": null,
+      "scope": [
+        "SPEC.md"
+      ],
+      "dependencies": [],
+      "requirements": [],
+      "gates": [
+        {
+          "id": "independent-review",
+          "command": "",
+          "mandatory": true,
+          "status": "pass",
+          "evidence": {
+            "human": "Mohanraj",
+            "reason": "Reviewed and approved",
+            "source_hash": "ce152c72de36f7da3bacda465974f3dc5c97d8c2b19aa8ad2d54d0c9e39e6e9a",
+            "observed_at": "2026-10-02T11:56:34.504Z"
+          },
+          "kind": "review"
+        }
+      ],
+      "next_action": "Interview the human, record durable context, and replace every placeholder in SPEC.md.",
+      "blocker": null,
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-09-25T07:34:38.927Z",
+      "updated_at": "2026-10-02T11:56:34.504Z"
+    },
+    {
+      "id": "TASK-ROUTER",
+      "outcome": "Implement intent classification and parameter extraction",
+      "state": "active",
+      "risk": "low",
+      "owner": null,
+      "scope": [],
+      "dependencies": [],
+      "requirements": [
+        "FR-1",
+        "FR-2",
+        "AC-2"
+      ],
+      "inputs": [],
+      "environment": [],
+      "scenarios": [],
+      "gates": [
+        {
+          "id": "eval",
+          "kind": "command",
+          "command": "python evaluate_v1.py",
+          "mandatory": true,
+          "status": "fail",
+          "evidence": {
+            "path": ".genesis/evidence/TASK-ROUTER-eval-6ae8f5e9-159c-4fac-b82e-0185cefef628.json",
+            "hash": "9711f6f26bb6356e952dfbd255a6c48938254e5fcb9bb79e9ab7302154e63070",
+            "source_hash": "ce152c72de36f7da3bacda465974f3dc5c97d8c2b19aa8ad2d54d0c9e39e6e9a",
+            "config_hash": "13c3a5d3c4260e08723dbf84fbd38e7732690925dfc2b7494a70daf1f6cdcbcd",
+            "observed_at": "2026-10-02T11:56:19.499Z"
+          }
+        }
+      ],
+      "next_action": "Run the task pre-flight.",
+      "blocker": null,
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-10-02T11:47:48.296Z",
+      "updated_at": "2026-10-02T11:47:48.297Z",
+      "base_manifest": {
+        ".agents/skills/genesis/SKILL.md": "fdf88f50d36d416eea1b1ea68311414bfde16d253d06469a48b4e13cec41d391",
+        ".agents/skills/ponytail/SKILL.md": "afe5b257ae7468289c3422474181a7b0807fcc65f84036bdbd2bf92feccf077b",
+        ".gitignore": "1b9a5213834d6b001af8f75ed5f6086ea55aca010def708217a854789476d06e",
+        "AGENTS.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "CLAUDE.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "README.md": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2",
+        "SPEC.md": "b85bd70031189f8dabb5259cfa33e748eb34cccbf0982669438a6236af86ba84",
+        "app/agent/agent.py": "92053fbdf714efa30d73441a5b76fdf51a2c640e3d4fd84131837d357962e48e",
+        "app/agent/reason.py": "9a695a386af05d149718e1eef57dc2d025e92f01af9034cf99f38482f6ad8c41",
+        "app/agent/router.py": "fd9b913da7b5917d33b2a16fce695191d9175c4de345cd4d37555223f2c56507",
+        "app/agent/state.py": "c1a95dabdefb0f9cba3828640704042dc634e3f2fe3ec5c627af0cfd1811ae89",
+        "app/agent/support_agent.py": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2",
+        "app/llm/client.py": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2",
+        "app/main.py": "87c4be118e664e8d6ef8baf356ded5cdd9e40d162d6387d48922d0c85b4831cc",
+        "app/rag/embed.py": "b762828b8300cf44d7cd8e5cd0c254644527afa8e11f440ccd5ca8d93b10bb5f",
+        "app/rag/ingest.py": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2",
+        "app/rag/prepare_data.py": "046d76ba43df4b85b21b0bf82e600bbdf6cb03c63f8321391f1f5470265fa6d1",
+        "app/rag/retrieve.py": "4ffa7382a8a3fb2da5d9ea1e62231ce8b97f04501ed2712350c2053d2e588da0",
+        "app/rag/vectorstore.py": "89f72b2d9a26e645761d2718815ec39727754c1e6e37b55f29414baefff737ea",
+        "app/utils/order_number.py": "8d9e107baa92e6699b435c38685c0b0d01471c373f90203adcc378a53788edac",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/data_level0.bin": "a6c15d2c7cb3f59d68184e5b3a1e7c3e7fbc49d1a92b9a886754e67b686acf5c",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/header.bin": "f0014a58c337f3ae2a43acdad382c0d294b0e8b2b68d9fc04d41fa69d8047f1e",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/index_metadata.pickle": "df0fcd8c8cccfc572dc2397725f3cd40a18fdf70f8833fda541f217dca81140c",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/length.bin": "25a3c63bb622a9eb9de0b60ad92192045e7926b019375723947c190afb91a654",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/link_lists.bin": "8ac84d943d143963b74018099e4b98638764952d9cc74d4708e890e1160ef48f",
+        "data/chroma/chroma.sqlite3": "93bd26eb3e5e2aa4febbf2bb81ac0357fface68f569c03142174abc29701d482",
+        "data/processed/embeddings.json": "4a711b3b4331b63209364bd37106413ac85afe85c28aaf962dfcc773c6b05b0f",
+        "data/processed/knowledge.json": "3e9379d9627d9f2c65a08fadf69d3cbab7614f3465ccd8a777fdb1090524bef9",
+        "data/raw/customer_support.csv": "388b2bdf52b198666e4589f3fd978c2b77591ccd4d447c418db2438ff7a584b1",
+        "eval/v1_eval_50.json": "cfbfa3040697d1e6bb3f0edf70bc4236b0a8d3d8e69c98fefb4093b77bd1a7d6",
+        "evaluate_v1.py": "cdf29c1740dc2df0227e536cee09599f343ce09a431f2407e38036696fd2447a",
+        "requirements.txt": "16518b9d6e132dee8aed1a1d0e9fa742e41acaca96d649d52a6dbd27c8f070ed",
+        "results/v1-results.md": "559f8f772ba00b179dc9de2fead757cd58e1b1236f2d96cfabfc675fd79b90ba",
+        "tests/test_cases.json": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2"
+      }
+    },
+    {
+      "id": "TASK-REASON",
+      "outcome": "Implement knowledge retrieval and evidence-based reasoning with safe escalation",
+      "state": "active",
+      "risk": "low",
+      "owner": null,
+      "scope": [],
+      "dependencies": [],
+      "requirements": [
+        "FR-3",
+        "FR-4",
+        "FR-5",
+        "NFR-1",
+        "NFR-2"
+      ],
+      "inputs": [],
+      "environment": [],
+      "scenarios": [],
+      "gates": [
+        {
+          "id": "eval",
+          "kind": "command",
+          "command": "python evaluate_v1.py",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        }
+      ],
+      "next_action": "Run the task pre-flight.",
+      "blocker": null,
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-10-02T11:47:55.179Z",
+      "updated_at": "2026-10-02T11:47:55.180Z",
+      "base_manifest": {
+        ".agents/skills/genesis/SKILL.md": "fdf88f50d36d416eea1b1ea68311414bfde16d253d06469a48b4e13cec41d391",
+        ".agents/skills/ponytail/SKILL.md": "afe5b257ae7468289c3422474181a7b0807fcc65f84036bdbd2bf92feccf077b",
+        ".gitignore": "1b9a5213834d6b001af8f75ed5f6086ea55aca010def708217a854789476d06e",
+        "AGENTS.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "CLAUDE.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "README.md": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2",
+        "SPEC.md": "b85bd70031189f8dabb5259cfa33e748eb34cccbf0982669438a6236af86ba84",
+        "app/agent/agent.py": "92053fbdf714efa30d73441a5b76fdf51a2c640e3d4fd84131837d357962e48e",
+        "app/agent/reason.py": "9a695a386af05d149718e1eef57dc2d025e92f01af9034cf99f38482f6ad8c41",
+        "app/agent/router.py": "fd9b913da7b5917d33b2a16fce695191d9175c4de345cd4d37555223f2c56507",
+        "app/agent/state.py": "c1a95dabdefb0f9cba3828640704042dc634e3f2fe3ec5c627af0cfd1811ae89",
+        "app/agent/support_agent.py": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2",
+        "app/llm/client.py": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2",
+        "app/main.py": "87c4be118e664e8d6ef8baf356ded5cdd9e40d162d6387d48922d0c85b4831cc",
+        "app/rag/embed.py": "b762828b8300cf44d7cd8e5cd0c254644527afa8e11f440ccd5ca8d93b10bb5f",
+        "app/rag/ingest.py": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2",
+        "app/rag/prepare_data.py": "046d76ba43df4b85b21b0bf82e600bbdf6cb03c63f8321391f1f5470265fa6d1",
+        "app/rag/retrieve.py": "4ffa7382a8a3fb2da5d9ea1e62231ce8b97f04501ed2712350c2053d2e588da0",
+        "app/rag/vectorstore.py": "89f72b2d9a26e645761d2718815ec39727754c1e6e37b55f29414baefff737ea",
+        "app/utils/order_number.py": "8d9e107baa92e6699b435c38685c0b0d01471c373f90203adcc378a53788edac",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/data_level0.bin": "a6c15d2c7cb3f59d68184e5b3a1e7c3e7fbc49d1a92b9a886754e67b686acf5c",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/header.bin": "f0014a58c337f3ae2a43acdad382c0d294b0e8b2b68d9fc04d41fa69d8047f1e",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/index_metadata.pickle": "df0fcd8c8cccfc572dc2397725f3cd40a18fdf70f8833fda541f217dca81140c",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/length.bin": "25a3c63bb622a9eb9de0b60ad92192045e7926b019375723947c190afb91a654",
+        "data/chroma/34102faf-91f5-446e-ac76-a12e669f03ef/link_lists.bin": "8ac84d943d143963b74018099e4b98638764952d9cc74d4708e890e1160ef48f",
+        "data/chroma/chroma.sqlite3": "eaaf0859be1fc7bedaca3a23c1cc1ff85123cc0ac353b6a721f7427d33301ad8",
+        "data/processed/embeddings.json": "4a711b3b4331b63209364bd37106413ac85afe85c28aaf962dfcc773c6b05b0f",
+        "data/processed/knowledge.json": "3e9379d9627d9f2c65a08fadf69d3cbab7614f3465ccd8a777fdb1090524bef9",
+        "data/raw/customer_support.csv": "388b2bdf52b198666e4589f3fd978c2b77591ccd4d447c418db2438ff7a584b1",
+        "eval/v1_eval_50.json": "cfbfa3040697d1e6bb3f0edf70bc4236b0a8d3d8e69c98fefb4093b77bd1a7d6",
+        "evaluate_v1.py": "cdf29c1740dc2df0227e536cee09599f343ce09a431f2407e38036696fd2447a",
+        "requirements.txt": "16518b9d6e132dee8aed1a1d0e9fa742e41acaca96d649d52a6dbd27c8f070ed",
+        "results/v1-results.md": "559f8f772ba00b179dc9de2fead757cd58e1b1236f2d96cfabfc675fd79b90ba",
+        "tests/test_cases.json": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2"
+      }
+    },
+    {
+      "id": "TASK-EVAL",
+      "outcome": "Validate end-to-end customer support agent against 50-case benchmark suite",
+      "state": "queued",
+      "risk": "low",
+      "owner": null,
+      "scope": [],
+      "dependencies": [],
+      "requirements": [
+        "AC-1",
+        "AC-3",
+        "NFR-3"
+      ],
+      "inputs": [],
+      "environment": [],
+      "scenarios": [],
+      "gates": [
+        {
+          "id": "eval",
+          "kind": "command",
+          "command": "python evaluate_v1.py",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        }
+      ],
+      "next_action": "Run the task pre-flight.",
+      "blocker": null,
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-10-02T11:47:55.405Z",
+      "updated_at": "2026-10-02T11:47:55.405Z"
+    }
+  ],
+  "learning_proposals": [],
+  "cleanup_proposals": [],
+  "controls": [],
+  "attempts": [
+    {
+      "id": "6ae8f5e9-159c-4fac-b82e-0185cefef628",
+      "task": "TASK-ROUTER",
+      "kind": "gate",
+      "command": "python evaluate_v1.py",
+      "timeout": 120000,
+      "authorization": null,
+      "pid": 58555,
+      "child_pid": 58609,
+      "started_at": "2026-10-02T11:55:02.324Z",
+      "status": "failed",
+      "before_hash": "e5ecd1a3e5d98ff1f136d4f6dcb20dc508a2cf4d8c663d5c9b226f3ee397b82c",
+      "config_hash": "13c3a5d3c4260e08723dbf84fbd38e7732690925dfc2b7494a70daf1f6cdcbcd",
+      "environment": {
+        "node": "v24.4.1",
+        "platform": "darwin",
+        "arch": "arm64",
+        "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+        "variables": {}
+      },
+      "cost": null,
+      "stop_reason": "configuration-changed",
+      "ended_at": "2026-10-02T11:56:19.499Z"
+    }
+  ],
+  "authorizations": [],
+  "experiments": [],
+  "incidents": [],
+  "discovery": {
+    "files": 90,
+    "languages": [
+      "javascript/typescript",
+      "python"
+    ],
+    "extensions": {
+      ".bin": 4,
+      ".csv": 1,
+      ".editorconfig": 1,
+      ".env": 1,
+      ".gitattributes": 1,
+      ".gitignore": 2,
+      ".html": 1,
+      ".jpg": 1,
+      ".json": 6,
+      ".md": 25,
+      ".mjs": 18,
+      ".nvmrc": 1,
+      ".pdf": 1,
+      ".pickle": 1,
+      ".png": 1,
+      ".py": 14,
+      ".sh": 3,
+      ".sqlite3": 1,
+      ".tex": 1,
+      ".txt": 1,
+      ".yml": 4,
+      "[none]": 1
+    },
+    "commands": {},
+    "legacy_genesis": false,
+    "revision": {
+      "commit": "6a172aa43984bb6577b84f79d2ece6287685b156",
+      "dirty": true,
+      "source_hash": "9addc494e02aeda5f869c5e7539e8dc43b0525e671bf4268d4b0d4c27225f9b0"
+    }
+  },
+  "checkpoint": {
+    "at": "2026-10-02T11:48:37.921Z",
+    "revision": {
+      "commit": "6a172aa43984bb6577b84f79d2ece6287685b156",
+      "dirty": true,
+      "source_hash": "e5ecd1a3e5d98ff1f136d4f6dcb20dc508a2cf4d8c663d5c9b226f3ee397b82c"
+    },
+    "active_task": "TASK-ROUTER",
+    "next_action": "Run the task pre-flight."
+  },
+  "legacy": null
+}

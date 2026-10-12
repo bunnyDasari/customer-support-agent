@@ -8,16 +8,16 @@ class AgentState:
     conversation: list[str] = field(default_factory=list)
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    state = AgentState()
+#     state = AgentState()
 
-    state.goal = "ORDER_STATUS"
-    state.order_number = "BB123456"
+#     state.goal = "ORDER_STATUS"
+#     state.order_number = "BB123456"
 
-    state.conversation.append("Where is my order?")
-    state.conversation.append(
-        "My order number is BB123456."
-    )
+#     state.conversation.append("Where is my order?")
+#     state.conversation.append(
+#         "My order number is BB123456."
+#     )
 
-    print(state)
+#     print(state)

@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "messages": [
+            "Where is my order?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 2,
+        "messages": [
+            "Can you track my order?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 3,
+        "messages": [
+            "When will my package arrive?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 4,
+        "messages": [
+            "My order has not arrived yet."
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 5,
+        "messages": [
+            "Can you tell me the status of my shipment?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 6,
+        "messages": [
+            "I want to check where my package is."
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 7,
+        "messages": [
+            "My delivery is delayed. Can you check it?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 8,
+        "messages": [
+            "Has my order been shipped?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 9,
+        "messages": [
+            "Can you check my delivery status?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 10,
+        "messages": [
+            "Where is my package right now?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 11,
+        "messages": [
+            "My package hasn't arrived. What is happening?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 12,
+        "messages": [
+            "I need an update on my order."
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 13,
+        "messages": [
+            "Can you tell me when my order will be delivered?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ASK_FOR_ORDER_NUMBER"
+    },
+    {
+        "id": 14,
+        "messages": [
+            "Please track order BB123456."
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ANSWER_OR_ESCALATE"
+    },
+    {
+        "id": 15,
+        "messages": [
+            "What is the status of order BB654321?"
+        ],
+        "expected_goal": "ORDER_STATUS",
+        "expected_action": "ANSWER_OR_ESCALATE"
+    },
+    {
+        "id": 16,
+        "messages": [
+            "What is your return policy?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 17,
+        "messages": [
+            "How do I return a product?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 18,
+        "messages": [
+            "How long does a refund take?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 19,
+        "messages": [
+            "Do you offer international shipping?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 20,
+        "messages": [
+            "What payment methods do you accept?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 21,
+        "messages": [
+            "Can I cancel an order?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 22,
+        "messages": [
+            "How can I get a refund?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 23,
+        "messages": [
+            "Do you charge for returns?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 24,
+        "messages": [
+            "What is the return window?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 25,
+        "messages": [
+            "Can I change my shipping address?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 26,
+        "messages": [
+            "What countries do you ship to?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 27,
+        "messages": [
+            "How long does standard shipping take?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 28,
+        "messages": [
+            "What should I do if I received a damaged product?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 29,
+        "messages": [
+            "How do I exchange an item?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 30,
+        "messages": [
+            "Can I return an item without the original packaging?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 31,
+        "messages": [
+            "Is there a warranty on your products?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 32,
+        "messages": [
+            "How can I update my account details?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 33,
+        "messages": [
+            "Do you support cash on delivery?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 34,
+        "messages": [
+            "How can I contact customer support?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 35,
+        "messages": [
+            "Can I cancel my order after placing it?"
+        ],
+        "expected_goal": "KNOWLEDGE_QUERY",
+        "expected_action": "ANSWER"
+    },
+    {
+        "id": 36,
+        "messages": [
+            "Hi"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 37,
+        "messages": [
+            "Hello there"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 38,
+        "messages": [
+            "Good morning"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 39,
+        "messages": [
+            "Thanks for your help"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 40,
+        "messages": [
+            "Thank you"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 41,
+        "messages": [
+            "Bye"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 42,
+        "messages": [
+            "Goodbye"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 43,
+        "messages": [
+            "Have a nice day"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 44,
+        "messages": [
+            "I am just testing this chat"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 45,
+        "messages": [
+            "What can you do?"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 46,
+        "messages": [
+            "Tell me a joke"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 47,
+        "messages": [
+            "Who are you?"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 48,
+        "messages": [
+            "I am having a great day"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 49,
+        "messages": [
+            "Nice to meet you"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    },
+    {
+        "id": 50,
+        "messages": [
+            "Okay, thanks"
+        ],
+        "expected_goal": "OTHER",
+        "expected_action": "OTHER"
+    }
+]

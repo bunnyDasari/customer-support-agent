@@ -1,0 +1,30 @@
+{
+  "task": "TASK-ROUTER",
+  "gate": "eval",
+  "kind": "command",
+  "attempt": "6ae8f5e9-159c-4fac-b82e-0185cefef628",
+  "command": "python evaluate_v1.py",
+  "started_at": "2026-10-02T11:55:02.324Z",
+  "observed_at": "2026-10-02T11:56:19.499Z",
+  "exit_code": null,
+  "signal": "SIGKILL",
+  "stdout": "\n============================================================\nLOADING EVALUATION DATASET\n============================================================\nLoaded 50 evaluation cases.\n\n============================================================\nV1 EVALUATION\n============================================================\n\nRunning case 1/50...\n\nRunning case 2/50...\n\nRunning case 3/50...\n\nRunning case 4/50...\n\nRunning case 5/50...\n\nRunning case 6/50...\n\nRunning case 7/50...\n\nRunning case 8/50...\n\nRunning case 9/50...\n\nRunning case 10/50...\n\nRunning case 11/50...\n\nRunning case 12/50...\n\nRunning case 13/50...\n\nRunning case 14/50...\n    Attempt 1\n",
+  "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 5318.40it/s]\n",
+  "failure": "configuration-changed",
+  "receipt": null,
+  "revision": {
+    "commit": "6a172aa43984bb6577b84f79d2ece6287685b156",
+    "dirty": true
+  },
+  "source_hash": "ce152c72de36f7da3bacda465974f3dc5c97d8c2b19aa8ad2d54d0c9e39e6e9a",
+  "before_hash": "e5ecd1a3e5d98ff1f136d4f6dcb20dc508a2cf4d8c663d5c9b226f3ee397b82c",
+  "config_hash": "13c3a5d3c4260e08723dbf84fbd38e7732690925dfc2b7494a70daf1f6cdcbcd",
+  "environment": {
+    "node": "v24.4.1",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+    "variables": {}
+  },
+  "hash": "9711f6f26bb6356e952dfbd255a6c48938254e5fcb9bb79e9ab7302154e63070"
+}
